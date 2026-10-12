@@ -37,4 +37,11 @@ vim.pack.add({ 'https://github.com/brianhuster/live-preview.nvim' })
 vim.pack.add({ 'https://github.com/stevearc/conform.nvim' })
 vim.pack.add({ 'https://github.com/windwp/nvim-ts-autotag' })
 
+require('tokyonight').setup({
+  transparent = true,
+  styles = {
+    sidebars = 'transparent', -- quickfix, help
+    floats = 'transparent',   -- pop up
+  },
+})
 vim.cmd.colorscheme('tokyonight-night')
