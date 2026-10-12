@@ -33,4 +33,5 @@ vim.pack.add({
   { src = 'https://github.com/ThePrimeagen/harpoon', version = 'harpoon2' },
 })
 vim.pack.add({ 'https://github.com/tpope/vim-fugitive' })
+vim.pack.add({ 'https://github.com/brianhuster/live-preview.nvim' })
 vim.cmd.colorscheme('tokyonight-night')
