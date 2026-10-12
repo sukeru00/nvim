@@ -34,4 +34,7 @@ vim.pack.add({
 })
 vim.pack.add({ 'https://github.com/tpope/vim-fugitive' })
 vim.pack.add({ 'https://github.com/brianhuster/live-preview.nvim' })
+vim.pack.add({ 'https://github.com/stevearc/conform.nvim' })
+vim.pack.add({ 'https://github.com/windwp/nvim-ts-autotag' })
+
 vim.cmd.colorscheme('tokyonight-night')
