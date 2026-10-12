@@ -25,8 +25,6 @@ vim.keymap.set('n', '<leader>fr', builtin.resume, { desc = 'Resume last search' 
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Grep in project' })
 vim.keymap.set('n', '<leader>gl', builtin.git_commits, { desc = 'Git log' })
 vim.keymap.set('n', '<leader>gg', builtin.git_status, { desc = 'Git status' })
-vim.keymap.set('n', '<leader>gi', builtin.lsp_implementations, { desc = 'Go to implementations' })
-vim.keymap.set('n', '<leader>gr', builtin.lsp_references, { desc = 'Go to references' })
 -- buffer level
 vim.keymap.set('n', '<leader>bgl', builtin.git_bcommits, { desc = 'Git log of this file' })
 vim.keymap.set('n', '<leader>/', builtin.current_buffer_fuzzy_find, { desc = 'Search in this file' })
