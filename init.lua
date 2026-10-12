@@ -18,7 +18,8 @@ vim.api.nvim_create_autocmd('PackChanged', {
 vim.pack.add({ 'https://github.com/christoomey/vim-tmux-navigator' })
 vim.pack.add({
   'https://github.com/nvim-lua/plenary.nvim', -- dependency
-  'https://github.com/nvim-telescope/telescope.nvim'
+  'https://github.com/nvim-telescope/telescope.nvim',
+  'https://github.com/nvim-telescope/telescope-ui-select.nvim'
 })
 vim.pack.add({ 'https://github.com/neovim/nvim-lspconfig' })
 vim.pack.add({ 'https://github.com/folke/which-key.nvim' })

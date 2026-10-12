@@ -71,3 +71,7 @@ vim.keymap.set('n', '<C-p>', '<cmd>cprev<cr>', { desc = 'Prev quickfix item' })
 -- diagnostics
 vim.keymap.set('n', '<leader>j', function() vim.diagnostic.jump({ count = 1, float = true }) end, { desc = 'Next diagnostic' })
 vim.keymap.set('n', '<leader>k', function() vim.diagnostic.jump({ count = -1, float = true }) end, { desc = 'Prev diagnostic' })
+
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show error detail' })
+vim.diagnostic.config({ virtual_text = true })
+vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, { desc = 'Code action' })
