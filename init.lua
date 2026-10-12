@@ -32,4 +32,5 @@ vim.pack.add({ 'https://github.com/nvim-neotest/neotest-python' }) -- Python ada
 vim.pack.add({
   { src = 'https://github.com/ThePrimeagen/harpoon', version = 'harpoon2' },
 })
+vim.pack.add({ 'https://github.com/tpope/vim-fugitive' })
 vim.cmd.colorscheme('tokyonight-night')
