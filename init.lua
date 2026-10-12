@@ -3,6 +3,7 @@ vim.o.nu = true
 vim.o.rnu = true
 vim.o.clipboard = 'unnamedplus'
 vim.o.termguicolors = true
+vim.o.winborder = 'rounded'
 vim.g.mapleader = ' '
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex, { desc = 'File explorer (netrw)' })
 vim.o.timeout = false
