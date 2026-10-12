@@ -54,3 +54,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 vim.o.completeopt = 'menu,menuone,noselect,popup'
+
+-- quickfix
+vim.keymap.set('n', '<C-n>', '<cmd>cnext<cr>', { desc = 'Next quickfix item' })
+vim.keymap.set('n', '<C-p>', '<cmd>cprev<cr>', { desc = 'Prev quickfix item' })
+
+-- diagnostics
+vim.keymap.set('n', '<leader>j', function() vim.diagnostic.jump({ count = 1, float = true }) end, { desc = 'Next diagnostic' })
+vim.keymap.set('n', '<leader>k', function() vim.diagnostic.jump({ count = -1, float = true }) end, { desc = 'Prev diagnostic' })
