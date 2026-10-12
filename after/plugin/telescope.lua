@@ -1,14 +1,14 @@
 require('telescope').setup({
-	defaults = {
-		layout_strategy = 'vertical',
-		layout_config = {
-			vertical = {
-				width = 0.95,
-				height = 0.95,
-				preview_height = 0.6,
-			},
-		},
-	},
+  defaults = {
+    layout_strategy = 'vertical',
+    layout_config = {
+      vertical = {
+        width = 0.95,
+        height = 0.95,
+        preview_height = 0.6,
+      },
+    },
+  },
 })
 local builtin = require('telescope.builtin')
 -- project level
