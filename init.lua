@@ -26,4 +26,7 @@ vim.pack.add({ 'https://github.com/folke/which-key.nvim' })
 vim.pack.add({ 'https://github.com/nvim-treesitter/nvim-treesitter' })
 vim.pack.add({ 'https://github.com/folke/tokyonight.nvim' })
 vim.pack.add({ 'https://github.com/lewis6991/gitsigns.nvim' })
+vim.pack.add({ 'https://github.com/nvim-neotest/nvim-nio' })      -- dependency
+vim.pack.add({ 'https://github.com/nvim-neotest/neotest' })
+vim.pack.add({ 'https://github.com/nvim-neotest/neotest-python' }) -- Python adapter
 vim.cmd.colorscheme('tokyonight-night')
