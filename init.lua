@@ -26,9 +26,16 @@ vim.pack.add({ 'https://github.com/folke/which-key.nvim' })
 vim.pack.add({ 'https://github.com/nvim-treesitter/nvim-treesitter' })
 vim.pack.add({ 'https://github.com/folke/tokyonight.nvim' })
 vim.pack.add({ 'https://github.com/lewis6991/gitsigns.nvim' })
-vim.pack.add({ 'https://github.com/nvim-neotest/nvim-nio' })       -- dependency
-vim.pack.add({ 'https://github.com/nvim-neotest/neotest' })
-vim.pack.add({ 'https://github.com/nvim-neotest/neotest-python' }) -- Python adapter
+vim.pack.add({
+  'https://github.com/nvim-neotest/nvim-nio', -- dependency
+  'https://github.com/nvim-neotest/neotest',
+  'https://github.com/nvim-neotest/neotest-python'
+})
+vim.pack.add({
+  'https://github.com/mfussenegger/nvim-dap',
+  'https://github.com/mfussenegger/nvim-dap-python',
+  'https://github.com/igorlfs/nvim-dap-view',
+})
 vim.pack.add({
   { src = 'https://github.com/ThePrimeagen/harpoon', version = 'harpoon2' },
 })

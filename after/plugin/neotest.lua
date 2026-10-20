@@ -33,3 +33,5 @@ vim.keymap.set('n', '<leader>tO', function() neotest.output_panel.toggle() end, 
 -- move between failed tests
 vim.keymap.set('n', '<leader>tj', function() neotest.jump.next({ status = 'failed' }) end, { desc = 'Next failed test' })
 vim.keymap.set('n', '<leader>tk', function() neotest.jump.prev({ status = 'failed' }) end, { desc = 'Prev failed test' })
+vim.keymap.set('n', '<leader>td', function() neotest.run.run({ strategy = 'dap' }) end, {
+  desc = 'Debug nearest test' })

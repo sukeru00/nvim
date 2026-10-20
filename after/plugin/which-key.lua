@@ -5,4 +5,5 @@ require('which-key').add({
   { '<leader>bg', group = 'git' },
   { '<leader>p',  group = 'project' },
   { '<leader>t',  group = 'test' },
+  { '<leader>d',  group = 'debug' },
 })
