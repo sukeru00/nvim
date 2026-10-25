@@ -40,7 +40,10 @@ vim.pack.add({
   { src = 'https://github.com/ThePrimeagen/harpoon', version = 'harpoon2' },
 })
 vim.pack.add({ 'https://github.com/tpope/vim-fugitive' })
-vim.pack.add({ 'https://github.com/sindrets/diffview.nvim' })
+vim.pack.add({
+  'https://github.com/nvim-tree/nvim-web-devicons', -- file icons (needs a Nerd Font)
+  'https://github.com/sindrets/diffview.nvim',
+})
 vim.pack.add({ 'https://github.com/brianhuster/live-preview.nvim' })
 vim.pack.add({ 'https://github.com/stevearc/conform.nvim' })
 vim.pack.add({ 'https://github.com/windwp/nvim-ts-autotag' })
