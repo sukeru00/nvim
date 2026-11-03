@@ -4,6 +4,11 @@ vim.o.rnu = true
 vim.o.clipboard = 'unnamedplus'
 vim.o.termguicolors = true
 vim.o.winborder = 'rounded'
+-- persistent undo history (~/.local/state/nvim/undo)
+local undodir = vim.fn.stdpath('state') .. '/undo'
+vim.fn.mkdir(undodir, 'p')
+vim.o.undodir = undodir .. '//'
+vim.o.undofile = true
 vim.g.mapleader = ' '
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex, { desc = 'File explorer (netrw)' })
 vim.o.timeout = false
