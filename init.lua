@@ -4,6 +4,11 @@ vim.o.rnu = true
 vim.o.clipboard = 'unnamedplus'
 vim.o.termguicolors = true
 vim.o.winborder = 'rounded'
+-- indent with 2 spaces (python's ftplugin overrides to 4, matching ruff/PEP 8)
+vim.o.expandtab = true
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2
+vim.o.softtabstop = 2
 -- persistent undo history (~/.local/state/nvim/undo)
 local undodir = vim.fn.stdpath('state') .. '/undo'
 vim.fn.mkdir(undodir, 'p')
