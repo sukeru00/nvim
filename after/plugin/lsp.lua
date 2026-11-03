@@ -48,12 +48,20 @@ vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(ev)
     local client = assert(vim.lsp.get_client_by_id(ev.data.client_id))
     if client:supports_method('textDocument/completion') then
+      -- autotrigger only fires on the server's triggerCharacters (e.g. '.'),
+      -- so add identifier chars to get suggestions while typing names
+      local provider = client.server_capabilities.completionProvider
+      local chars = vim.split('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_', '')
+      provider.triggerCharacters = provider.triggerCharacters or {}
+      if not vim.tbl_contains(provider.triggerCharacters, 'a') then
+        vim.list_extend(provider.triggerCharacters, chars)
+      end
       vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
     end
   end,
 })
 
-vim.o.completeopt = 'menu,menuone,noselect,popup'
+vim.o.completeopt = 'menu,menuone,noinsert,popup'
 
 -- quickfix
 vim.keymap.set('n', '<C-n>', '<cmd>cnext<cr>', { desc = 'Next quickfix item' })
