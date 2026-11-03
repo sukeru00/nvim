@@ -20,7 +20,12 @@ require('telescope').load_extension('ui-select')
 local builtin = require('telescope.builtin')
 
 -- project level
-vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Find files' })
+vim.keymap.set('n', '<leader>ff', function()
+  builtin.find_files({ hidden = true, file_ignore_patterns = { '^%.git/' } })
+end, { desc = 'Find files (incl. dotfiles)' })
+vim.keymap.set('n', '<leader>fF', function()
+  builtin.find_files({ hidden = true, no_ignore = true, file_ignore_patterns = { '^%.git/', 'node_modules/' } })
+end, { desc = 'Find files (incl. gitignored, e.g. .env.local)' })
 vim.keymap.set('n', '<leader>fr', builtin.resume, { desc = 'Resume last search' })
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Grep in project' })
 vim.keymap.set('n', '<leader>gl', builtin.git_commits, { desc = 'Git log' })
