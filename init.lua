@@ -25,7 +25,13 @@ vim.api.nvim_create_autocmd('PackChanged', {
     end
   end,
 })
+-- set navigator keys ourselves so <C-\> (TmuxNavigatePrevious) stays free for toggleterm
+vim.g.tmux_navigator_no_mappings = 1
 vim.pack.add({ 'https://github.com/christoomey/vim-tmux-navigator' })
+vim.keymap.set('n', '<C-h>', '<cmd>TmuxNavigateLeft<cr>', { desc = 'Window/pane left' })
+vim.keymap.set('n', '<C-j>', '<cmd>TmuxNavigateDown<cr>', { desc = 'Window/pane down' })
+vim.keymap.set('n', '<C-k>', '<cmd>TmuxNavigateUp<cr>', { desc = 'Window/pane up' })
+vim.keymap.set('n', '<C-l>', '<cmd>TmuxNavigateRight<cr>', { desc = 'Window/pane right' })
 vim.pack.add({
   'https://github.com/nvim-lua/plenary.nvim', -- dependency
   'https://github.com/nvim-telescope/telescope.nvim',
@@ -58,6 +64,7 @@ vim.pack.add({
 vim.pack.add({ 'https://github.com/brianhuster/live-preview.nvim' })
 vim.pack.add({ 'https://github.com/stevearc/conform.nvim' })
 vim.pack.add({ 'https://github.com/windwp/nvim-ts-autotag' })
+vim.pack.add({ 'https://github.com/akinsho/toggleterm.nvim' })
 
 require('tokyonight').setup({
   transparent = true,
