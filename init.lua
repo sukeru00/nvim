@@ -39,7 +39,8 @@ vim.pack.add({ 'https://github.com/lewis6991/gitsigns.nvim' })
 vim.pack.add({
   'https://github.com/nvim-neotest/nvim-nio', -- dependency
   'https://github.com/nvim-neotest/neotest',
-  'https://github.com/nvim-neotest/neotest-python'
+  'https://github.com/nvim-neotest/neotest-python',
+  'https://github.com/marilari88/neotest-vitest',
 })
 vim.pack.add({
   'https://github.com/mfussenegger/nvim-dap',

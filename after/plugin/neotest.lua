@@ -11,6 +11,7 @@ neotest.setup({
       end,
       args = { '-q' },
     }),
+    require('neotest-vitest'),
   },
   -- Show failure messages on the failing line.
   status = { virtual_text = true },
